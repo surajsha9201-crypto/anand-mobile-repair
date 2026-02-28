@@ -9,113 +9,126 @@
 
 <style>
 
-body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: #f4f7fb;
-    scroll-behavior: smooth;
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:#f2f5f9;
 }
 
-header {
-    background: linear-gradient(135deg, #0d6efd, #00c6ff);
-    color: white;
-    text-align: center;
-    padding: 60px 20px;
+header{
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url('https://images.unsplash.com/photo-1580910051074-3eb694886505');
+background-size:cover;
+background-position:center;
+color:white;
+text-align:center;
+padding:90px 20px;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 32px;
+header h1{
+font-size:32px;
+margin:0;
 }
 
-header p {
-    margin: 10px 0;
+header p{
+margin:10px 0;
 }
 
-.btn {
-    display: inline-block;
-    padding: 12px 22px;
-    margin: 10px 5px;
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
-    transition: 0.3s;
+.btn{
+display:inline-block;
+padding:12px 25px;
+margin:10px 5px;
+border-radius:30px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+transition:0.3s;
 }
 
-.call-btn { background: #198754; }
-.whatsapp-btn { background: #25D366; }
+.call{background:#198754;}
+.whatsapp{background:#25D366;}
 
-.btn:hover {
-    transform: scale(1.05);
+.btn:hover{
+transform:scale(1.08);
 }
 
-section {
-    padding: 50px 20px;
-    text-align: center;
-    animation: fadeIn 1s ease-in;
+section{
+padding:60px 20px;
+text-align:center;
 }
 
-h2 {
-    color: #0d6efd;
-    margin-bottom: 20px;
+h2{
+color:#0d6efd;
+margin-bottom:20px;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
+.services{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
 }
 
-ul li {
-    padding: 8px 0;
+.card{
+background:white;
+padding:20px;
+width:260px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.3s;
 }
 
-.price-box {
-    background: white;
-    margin: 10px auto;
-    padding: 15px;
-    max-width: 320px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: 0.3s;
+.card:hover{
+transform:translateY(-8px);
 }
 
-.price-box:hover {
-    transform: translateY(-5px);
+.price{
+background:white;
+margin:10px auto;
+padding:15px;
+max-width:300px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
-.review-box {
-    background: white;
-    margin: 10px auto;
-    padding: 20px;
-    max-width: 350px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+.review{
+background:white;
+margin:15px auto;
+padding:20px;
+max-width:350px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
-footer {
-    background: #0d6efd;
-    color: white;
-    text-align: center;
-    padding: 15px;
+iframe{
+border-radius:15px;
 }
 
-.whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25D366;
-    color: white;
-    padding: 15px;
-    border-radius: 50%;
-    text-decoration: none;
-    font-size: 22px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+footer{
+background:#0d6efd;
+color:white;
+padding:15px;
+text-align:center;
 }
 
-@keyframes fadeIn {
-from {opacity: 0; transform: translateY(20px);}
-to {opacity: 1; transform: translateY(0);}
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:50%;
+font-size:22px;
+text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+@media(max-width:768px){
+.services{
+flex-direction:column;
+align-items:center;
+}
 }
 
 </style>
@@ -128,43 +141,46 @@ to {opacity: 1; transform: translateY(0);}
 <p>All Mobile Repair & Accessories Available</p>
 <p>Fast & Trusted Service | All Brands Supported</p>
 
-<a href="tel:7004470872" class="btn call-btn">📞 Call Now</a>
-<a href="https://wa.me/917004470872" class="btn whatsapp-btn">💬 WhatsApp</a>
+<a href="tel:7004470872" class="btn call">📞 Call Now</a>
+<a href="https://wa.me/917004470872" class="btn whatsapp">💬 WhatsApp</a>
 </header>
 
 <section>
 <h2>Our Services</h2>
-<ul>
-<li>✔ Mobile Screen Replacement</li>
-<li>✔ Battery Replacement</li>
-<li>✔ Charging Problem Repair</li>
-<li>✔ Water Damage Repair</li>
-<li>✔ Software Update & Flashing</li>
-<li>✔ Speaker / Mic Repair</li>
-<li>✔ All Brand Smartphone Repair</li>
-</ul>
+
+<div class="services">
+<div class="card">📱 Screen Replacement</div>
+<div class="card">🔋 Battery Replacement</div>
+<div class="card">🔌 Charging Repair</div>
+<div class="card">💧 Water Damage Repair</div>
+<div class="card">💻 Software Update</div>
+<div class="card">🔊 Speaker / Mic Repair</div>
+</div>
+
 </section>
 
 <section>
 <h2>Price Starting From</h2>
-<div class="price-box">Screen Replacement – ₹999</div>
-<div class="price-box">Battery Replacement – ₹499</div>
-<div class="price-box">Software – ₹299</div>
-<div class="price-box">Charging Repair – ₹399</div>
+
+<div class="price">Screen Replacement – ₹999</div>
+<div class="price">Battery Replacement – ₹499</div>
+<div class="price">Software – ₹299</div>
+<div class="price">Charging Repair – ₹399</div>
+
 <p><i>*Final price depends on mobile model</i></p>
 </section>
 
 <section>
 <h2>Customer Reviews</h2>
 
-<div class="review-box">
-⭐⭐⭐⭐⭐<br>
+<div class="review">
+⭐⭐⭐⭐⭐ <br>
 "Very fast service and genuine parts!"<br>
 – Ravi Kumar
 </div>
 
-<div class="review-box">
-⭐⭐⭐⭐⭐<br>
+<div class="review">
+⭐⭐⭐⭐⭐ <br>
 "Best mobile repair shop in Sarath."<br>
 – Amit Singh
 </div>
@@ -175,7 +191,7 @@ to {opacity: 1; transform: translateY(0);}
 <h2>Find Us on Map</h2>
 <iframe 
 src="https://www.google.com/maps?q=Sarath,Deoghar,Jharkhand&output=embed"
-width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+width="100%" height="300">
 </iframe>
 </section>
 
@@ -194,4 +210,4 @@ width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
 <a href="https://wa.me/917004470872" class="whatsapp-float">💬</a>
 
 </body>
-    </html>
+</html>
