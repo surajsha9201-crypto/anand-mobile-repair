@@ -1,20 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Maa Jagdamba Mobile Repair</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
 body{
+margin:0;
 font-family:'Segoe UI',sans-serif;
-background:#0f2027;
-overflow-x:hidden;
+background:linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#1c92d2);
+background-size:400% 400%;
+animation:bg 12s ease infinite;
 color:white;
+overflow-x:hidden;
 }
 
-/* Animated Background */
+@keyframes bg{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
+
 .hero{
 height:100vh;
 display:flex;
@@ -22,29 +28,16 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-background:linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#1c92d2);
-background-size:400% 400%;
-animation:bgMove 10s ease infinite;
 position:relative;
 }
 
-@keyframes bgMove{
-0%{background-position:0% 50%}
-50%{background-position:100% 50%}
-100%{background-position:0% 50%}
-}
+h1{font-size:28px;margin-bottom:10px;}
 
-/* Floating Phone Icons */
-.phone{
-position:absolute;
-font-size:40px;
-opacity:0.2;
-animation:float 6s infinite ease-in-out;
+.phone-img{
+width:220px;
+margin:20px 0;
+animation:float 4s ease-in-out infinite;
 }
-
-.phone:nth-child(1){top:20%;left:10%;}
-.phone:nth-child(2){top:70%;left:80%;animation-delay:2s;}
-.phone:nth-child(3){top:40%;left:85%;animation-delay:4s;}
 
 @keyframes float{
 0%{transform:translateY(0px)}
@@ -52,32 +45,14 @@ animation:float 6s infinite ease-in-out;
 100%{transform:translateY(0px)}
 }
 
-/* Main Text */
-h1{
-font-size:32px;
-margin-bottom:10px;
-animation:fadeIn 2s ease;
-}
-
-@keyframes fadeIn{
-from{opacity:0;transform:translateY(20px)}
-to{opacity:1;transform:translateY(0)}
-}
-
-.tagline{
-opacity:0.9;
-margin-bottom:25px;
-}
-
-/* Buttons */
 .btn{
 display:inline-block;
-margin:10px;
-padding:12px 30px;
+margin:8px;
+padding:12px 25px;
 border-radius:30px;
 text-decoration:none;
-font-weight:bold;
 color:white;
+font-weight:bold;
 transition:0.3s;
 }
 
@@ -87,10 +62,9 @@ transition:0.3s;
 
 .btn:hover{
 transform:scale(1.1);
-box-shadow:0 0 20px rgba(255,255,255,0.5);
+box-shadow:0 0 15px rgba(255,255,255,0.5);
 }
 
-/* Services Section */
 .section{
 background:#f1f3f6;
 color:#333;
@@ -115,8 +89,7 @@ transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-10px);
-box-shadow:0 15px 25px rgba(0,0,0,0.2);
+transform:translateY(-8px);
 }
 
 footer{
@@ -124,7 +97,6 @@ background:#111;
 color:white;
 padding:15px;
 text-align:center;
-font-size:14px;
 }
 </style>
 </head>
@@ -133,12 +105,10 @@ font-size:14px;
 
 <div class="hero">
 
-<div class="phone">📱</div>
-<div class="phone">🔋</div>
-<div class="phone">⚡</div>
-
 <h1>MAA Jagdamba Mobile Repair</h1>
-<p class="tagline">Premium Mobile Repair Service in Sarath</p>
+<p>Premium Mobile Repair Service in Sarath</p>
+
+<img src="https://cdn-icons-png.flaticon.com/512/15/15874.png" class="phone-img">
 
 <a href="tel:7004470872" class="btn call">📞 Call Now</a>
 <a href="https://wa.me/917004470872" class="btn whatsapp">💬 WhatsApp</a>
@@ -148,13 +118,12 @@ font-size:14px;
 
 <div class="section">
 <h2>Our Expert Services</h2>
-<br>
 <div class="services">
 <div class="card">📱 Screen Replacement</div>
 <div class="card">🔋 Battery Replacement</div>
 <div class="card">⚡ Charging Repair</div>
 <div class="card">💧 Water Damage Repair</div>
-<div class="card">🔊 Speaker / Mic Repair</div>
+<div class="card">🔊 Speaker Repair</div>
 <div class="card">🛠 Software Update</div>
 </div>
 </div>
